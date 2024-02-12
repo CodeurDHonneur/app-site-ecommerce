@@ -1,1 +1,32 @@
-<p>products works!</p>
+<div class="flex gap-3 px-5">
+    <div class="w-8/12">
+        <div class="bg-blue-600 shadow-md rounded-md">
+            <div class="bg-primary p-3 rounded-t-md">
+                <div class="flex justify-between">
+                    <div class="text-lg font-semibold text-white">Product list</div>
+                    <div>
+                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border">New</button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3">
+                <!-- Contenu de la carte -->
+            </div>
+        </div>
+    </div>
+    <div class="w-4/12" *ngIf="isSidePanelVisible">
+        <div class="bg-blue-600 shadow-md rounded-md">
+            <div class="bg-primary p-3 rounded-t-md">
+                <div class="flex justify-between">
+                    <div class="text-lg font-semibold text-white">New Product</div>
+                    <div>
+                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3">
+                <!-- Contenu de la carte -->
+            </div>
+        </div>
+    </div>
+</div>
