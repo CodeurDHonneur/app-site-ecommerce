@@ -1,30 +1,41 @@
 <div class="flex gap-3 px-5">
-    <div class="w-8/12">
+    <div [ngClass]="isSidePanelVisible ? 'w-8/12' : 'w-full'">
         <div class="bg-blue-600 shadow-md rounded-md">
-            <div class="bg-primary p-3 rounded-t-md">
+            <div class="bg-primary px-2 py-2 rounded-t-md">
                 <div class="flex justify-between">
                     <div class="text-lg font-semibold text-white">Product list</div>
                     <div>
-                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border">New</button>
+                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border" (click)="openSidePannel()">New</button>
                     </div>
                 </div>
             </div>
-            <div class="p-3">
-                <!-- Contenu de la carte -->
+            <div class="flex space-y-3a">
+                <div class="bg-white shadow-md text-center">
+                    <img src="" alt="">
+                    <p>John Doe</p>
+                    <div>Some Exemple test</div>
+                    <button class="px-4 py-2 bg-blue-600">See Profile</button>
+                </div>
+                <div class="bg-white shadow-md text-center">
+                    <img src="" alt="">
+                    <p>John Doe</p>
+                    <div>Some Exemple test</div>
+                    <button class="px-4 py-2 bg-blue-600">See Profile</button>
+                </div>
             </div>
         </div>
     </div>
     <div class="w-4/12" *ngIf="isSidePanelVisible">
         <div class="bg-blue-600 shadow-md rounded-md">
-            <div class="bg-primary p-3 rounded-t-md">
+            <div class="bg-primary px-2 py-2 rounded-t-md">
                 <div class="flex justify-between">
                     <div class="text-lg font-semibold text-white">New Product</div>
                     <div>
-                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border">Clear</button>
+                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border" (click)="closeSidePannel()">Close</button>
                     </div>
                 </div>
             </div>
-            <div class="p-3">
+            <div class="">
                 <!-- Contenu de la carte -->
             </div>
         </div>
