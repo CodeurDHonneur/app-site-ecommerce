@@ -8,6 +8,19 @@ import { Component } from '@angular/core';
 export class ProductsComponent {
   isSidePanelVisible: boolean = false;
 
+  productObj: any = {
+    "productId": 0,
+    "productSku": "",
+    "productName": "",
+    "productPrice": 0,
+    "productShortName": "",
+    "productDescription": "",
+    "createDate": new Date(),
+    "deliveryTimeSpan": "",
+    "categoryId": 0,
+    "productImageUrl": ""
+  }
+
   openSidePannel(){
     this.isSidePanelVisible = true;
   }

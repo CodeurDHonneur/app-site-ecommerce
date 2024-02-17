@@ -5,25 +5,36 @@
                 <div class="flex justify-between">
                     <div class="text-lg font-semibold text-white">Product list</div>
                     <div>
-                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border" (click)="openSidePannel()">New</button>
+                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border"
+                            (click)="openSidePannel()">New</button>
                     </div>
                 </div>
             </div>
-            <div class="flex space-y-3a">
-                <div class="bg-white shadow-md text-center">
-                    <img src="" alt="">
-                    <p>John Doe</p>
-                    <div>Some Exemple test</div>
-                    <button class="px-4 py-2 bg-blue-600">See Profile</button>
-                </div>
-                <div class="bg-white shadow-md text-center">
-                    <img src="" alt="">
-                    <p>John Doe</p>
-                    <div>Some Exemple test</div>
-                    <button class="px-4 py-2 bg-blue-600">See Profile</button>
-                </div>
+        </div>
+
+        <div class="flex gap-3 flex-wrap border  p-5 min-h-6">
+            <div class="bg-white space-y-3 rounded-lg shadow-md p-5 w-[250px] md:w-80 md:h-60">
+                <img src="" alt="">
+                <p>John Doe</p>
+                <div>Some Exemple test</div>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">See Profile</button>
+            </div>
+            <div class="bg-white space-y-3 rounded-lg shadow-md p-5 w-[250px] md:w-80 md:h-60">
+                <img src="" alt="">
+                <p>John Doe</p>
+                <div>Some Exemple test</div>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">See Profile</button>
+            </div>
+            <div class="bg-white space-y-3 rounded-lg shadow-md p-5 w-[250px] md:w-80 md:h-60">
+                <img src="" alt="">
+                <p>John Doe</p>
+                <div>Some Exemple test</div>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">See Profile</button>
             </div>
         </div>
+
+
+
     </div>
     <div class="w-4/12" *ngIf="isSidePanelVisible">
         <div class="bg-blue-600 shadow-md rounded-md">
@@ -31,12 +42,56 @@
                 <div class="flex justify-between">
                     <div class="text-lg font-semibold text-white">New Product</div>
                     <div>
-                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border" (click)="closeSidePannel()">Close</button>
+                        <button class="bg-green-500 text-white px-4 py-2  rounded-md border"
+                            (click)="closeSidePannel()">Close</button>
                     </div>
                 </div>
             </div>
-            <div class="">
-                <!-- Contenu de la carte -->
+        </div>
+        <div class="border  gap-3 p-3 min-h-6">
+            <div class=" flex flex-wrap gap-3 ">
+                <div class="flex flex-col w-[45%]">
+                    <label for="">SKU</label>
+                    <input type="text" [(ngModel)]="productObj.productSku" class="pl-2">
+                </div>
+                <div class="flex flex-col w-[45%]">
+                    <label for="">Name</label>
+                    <input type="text" [(ngModel)]="productObj.productName" class="pl-2">
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3 ">
+                <div class="flex flex-col w-[45%]">
+                    <label for="">Short Name</label>
+                    <input type="text" [(ngModel)]="productObj.productShortName" class="pl-2">
+                </div>
+                <div class="flex flex-col w-[45%]">
+                    <label for="">Price</label>
+                    <input type="text" [(ngModel)]="productObj.productPrice" class="pl-2">
+                </div>
+            </div>
+
+
+            <div class="flex flex-wrap gap-3 ">
+                <div class="flex flex-col w-[45%]">
+                    <label for="">delivery Time Span </label>
+                    <input type="text" [(ngModel)]="productObj.deliveryTimeSpan" class="pl-2">
+                </div>
+                <div class="flex flex-col w-[45%]">
+                    <label for="">category</label>
+                    <input type="text" [(ngModel)]="productObj.categoryId" class="pl-2">
+                </div>
+            </div>
+
+            
+            <div class="flex flex-col ">
+                <label for="">Image</label>
+                <input type="text" [(ngModel)]="productObj.productImageUrl" class="pl-2">
+            </div>
+            <div class="flex flex-col ">
+                <label for="">Description</label>
+                <textarea type="textarea" rows="5" cols="5" [(ngModel)]="productObj.productDescription"
+                    class="pl-2"></textarea>
             </div>
         </div>
     </div>

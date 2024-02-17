@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply max-w-[1200px] mx-auto bg-gray-100 px-2 md:px-4
+    }
+}
